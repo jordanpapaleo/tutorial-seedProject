@@ -2,10 +2,18 @@
   "name": "seed-project",
   "version": "1.0.0",
   "description": "A web seed project using webpack, react, and es6",
-  "main": "index.js",
+  "main": "./app/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "standard ./**/*.js, ./**/*.jsx, *.js | standard-reporter --stylish",
+    "build-dist": "rm -rf ./dist && webpack --config webpack.config.js --bail -p",
+    "dist": "npm test && npm run build-dist"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "html-webpack-plugin": "1.7.0",
+    "standard": "^5.4.1",
+    "standard-reporter": "^1.0.5",
+    "webpack": "1.12.9"
+  }
 }
