@@ -4,10 +4,11 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   context: path.join(__dirname, 'app'),
   entry: './index.js',
-  output: {
-    filename: 'bundle.js',
-    path: path.join(__dirname, 'dist')
-  },
+    output: {
+      filename: 'bundle.js',
+      path: path.join(__dirname, 'dist'),
+      publicPath: 'http://localhost:8080/'
+    },
   resolve: {
     root: [
       path.join(__dirname, 'app')

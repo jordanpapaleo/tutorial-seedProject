@@ -6,10 +6,17 @@
   "scripts": {
     "test": "standard ./**/*.js, ./**/*.jsx, *.js | standard-reporter --stylish",
     "build-dist": "rm -rf ./dist && webpack --config webpack.config.js --bail -p",
-    "dist": "npm test && npm run build-dist"
+    "dist": "npm test && npm run build-dist",
+    "dev": "webpack-dev-server --inline --hot"
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "bootstrap": "3.3.6",
+    "gsap": "1.18.2",
+    "react": "0.14.5",
+    "react-dom": "0.14.5"
+  },
   "devDependencies": {
     "babel-core": "6.3.26",
     "babel-loader": "6.2.0",
@@ -25,12 +32,7 @@
     "standard-reporter": "1.0.5",
     "style-loader": "0.13.0",
     "url-loader": "0.5.7",
-    "webpack": "1.12.9"
-  },
-  "dependencies": {
-    "bootstrap": "3.3.6",
-    "gsap": "1.18.2",
-    "react": "0.14.5",
-    "react-dom": "0.14.5"
+    "webpack": "1.12.9",
+    "webpack-dev-server": "^1.14.0"
   }
 }
