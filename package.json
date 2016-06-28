@@ -4,6 +4,8 @@
   "description": "A web seed project using webpack, react, and es6",
   "main": "./app/index.js",
   "scripts": {
+    "start": "webpack && serve ./dist",
+    "start:dev": "webpack",
     "test": "standard ./**/*.js, ./**/*.jsx, *.js | standard-reporter --stylish",
     "build-dist": "rm -rf ./dist && webpack --config webpack.config.js --bail -p",
     "dist": "npm test && npm run build-dist"
